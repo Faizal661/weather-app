@@ -1,26 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import WeatherSearch from './WeatherSearch';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-600 flex flex-col items-center justify-center">
+      <h1 className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white p-5 mb-14 shadow-lg rounded-xl">Weather Tracker</h1>
+      <div className="bg-gradient-to-r from-violet-500 via-indigo-600 to-blue-600 p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <WeatherSearch />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
