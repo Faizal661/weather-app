@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'f425f1903723494665865439bfa8b5e7';
+const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY ;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 export const getWeatherByCity = async (city: string) => {
@@ -8,7 +8,7 @@ export const getWeatherByCity = async (city: string) => {
       const response = await axios.get(BASE_URL, {
         params: {
           q: city,
-          appid: API_KEY,
+          appid: WEATHER_API_KEY,
           units: 'metric',  // Use 'imperial' for Fahrenheit
         },
       });
